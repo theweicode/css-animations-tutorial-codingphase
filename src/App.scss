@@ -1,0 +1,20 @@
+.parent{
+  background: yellow;
+  padding: 50px;
+  width: 100%;
+  transition: background .5s ease-in-out 1s, width 1s ease-in-out, opacity .5s ease-in-out 1s, width 1s ease-in-out;
+  opacity: 1;
+  &:hover{
+    background: red;
+    width: 50%;
+    opacity: 0;
+    .child{
+      background: blue;
+    }
+  }
+  .child{
+    background: black;
+    height: 300px;
+    transition: all .5s ease-in-out;
+  }
+}
