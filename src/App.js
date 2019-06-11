@@ -3,12 +3,32 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="parent">
-   <div className="child">
+   <div className="container">
+   <ul className="menu">
+     <li>Products
+    <ul className="first">
+      <li>Shoes
+      <ul className="second">
+      <li>Mens
+        <ul className="third">
+          <li>Basketball</li>
+          <li>Running</li>
+          <li>Training</li>
+        </ul>
+      </li>
+      <li>Womens</li>
+      <li>Children</li>
+    </ul>
+      </li>
+      <li>Clothes</li>
+      <li>Gear</li>
+    </ul>
 
-     <button className="btn">Button</button>
+     </li>
+     <li>Support</li>
+     <li>Contact</li>
+   </ul>
    </div>
-    </div>
   );
 }
 

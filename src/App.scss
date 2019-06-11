@@ -1,3 +1,4 @@
+
 /* .parent{
   background: yellow;
   padding: 50px;
@@ -20,7 +21,7 @@
 } */
 
 
-.btn {
+/* .btn {
   background: green;
   transition: background .5s ease-in-out, color .5s ease-in-out;
   border: none;
@@ -31,4 +32,88 @@
     background: red;
     color: white; 
   }
+} */
+
+.container{
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.menu{
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+ 
+li{
+  display: inline-block;
+  list-style: none;
+  
+  padding: 20px;
+  border: 1px solid #000;
+  margin: 0;
+  position: relative;
+  transition: all .4s ease-in-out;
+  &:hover{
+   & > ul.first {
+     opacity: 1;
+     visibility: visible;
+   }
+  }
+  ul.first{
+    background: red;    
+    left: 0px;
+    top: 56px;
+    position: absolute;
+    visibility: hidden;
+    width: 200px;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    li{
+      display: block;
+      &:hover{
+        & > ul.second {
+          opacity: 1;
+          visibility: visible;
+        }
+       }
+      ul.second{
+        background: blue;
+        left: 0px;
+    top: 56px;
+    position: absolute;
+    visibility: hidden;
+    width: 200px;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    
+        li{
+          
+          display: block;
+          &:hover{
+            & > ul.third {
+              opacity: 1;
+              visibility: visible;
+            }
+           }
+          ul.third{
+            background: teal;
+            left: 0px;
+            top: 56px;
+            position: absolute;
+            visibility: hidden;
+            width: 200px;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+          
+        li{display: block;
+        }
+          }
+        }
+      }
+    }
+  }
+
+}
+
 }
