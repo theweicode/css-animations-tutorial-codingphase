@@ -61,9 +61,9 @@ li{
    }
   }
   ul.first{
-    background: red;    
-    left: 0px;
-    top: 56px;
+     
+    left: -41px;
+    top: 62px;
     position: absolute;
     visibility: hidden;
     width: 200px;
@@ -71,6 +71,8 @@ li{
     transition: all .4s ease-in-out;
     li{
       display: block;
+      background: red;   
+      left: 0px;
       &:hover{
         & > ul.second {
           opacity: 1;
@@ -78,17 +80,19 @@ li{
         }
        }
       ul.second{
-        background: blue;
-        left: 0px;
-    top: 56px;
-    position: absolute;
-    visibility: hidden;
-    width: 200px;
-    opacity: 0;
-    transition: all .4s ease-in-out;
+       left: -41px;
+        
+        top: -1px;
+        position: absolute;
+        visibility: hidden;
+        width: 200px;
+        opacity: 0;
+        transition: all .4s ease-in-out;
     
         li{
-          
+          left: 100%;
+          position: relative;
+          background: blue;
           display: block;
           &:hover{
             & > ul.third {
@@ -97,16 +101,17 @@ li{
             }
            }
           ul.third{
-            background: teal;
-            left: 0px;
-            top: 56px;
+            
+            left: -41px;
+        
+            top: -1px;
             position: absolute;
             visibility: hidden;
             width: 200px;
             opacity: 0;
             transition: all .4s ease-in-out;
           
-        li{display: block;
+        li{display: block; background: teal;
         }
           }
         }
