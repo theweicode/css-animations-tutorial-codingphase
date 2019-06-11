@@ -1,35 +1,53 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.scss';
 
-function App() {
-  return (
-   <div className="container">
-   <ul className="menu">
-     <li>Products
-    <ul className="first">
-      <li>Shoes
-      <ul className="second">
-      <li>Mens
-        <ul className="third">
-          <li>Basketball</li>
-          <li>Running</li>
-          <li>Training</li>
-        </ul>
-      </li>
-      <li>Womens</li>
-      <li>Children</li>
-    </ul>
-      </li>
-      <li>Clothes</li>
-      <li>Gear</li>
-    </ul>
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "Will",
+      isActive: false,
+      position: 0
+    
+    };
+    this.transform = this.transform.bind(this);
+  }
 
-     </li>
-     <li>Support</li>
-     <li>Contact</li>
-   </ul>
-   </div>
-  );
+  transform() {
+    if (this.state.position < 3)
+    {
+      this.setState({position: this.state.position + 1})
+    }
+    if (this.state.position === 3) {
+      this.setState({position: 0})
+    }
+    
+  }
+  render() {
+
+    let classname = 'box pos-0';
+    if (this.state.position === 0) {
+      classname = 'box pos-0';
+    }
+    if (this.state.position === 1) {
+      classname = 'box pos-1';
+    }
+    if (this.state.position === 2) {
+      classname = 'box pos-2';
+    }
+    if (this.state.position === 3) {
+      classname = 'box pos-3';
+    }
+    console.log(classname)
+    return (
+      <div className="container">
+     <button className="btn" onClick={this.transform}>Transform</button>
+     <div className={classname}></div>
+
+      </div>
+     );
+  }
+ 
 }
 
 export default App;
