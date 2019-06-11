@@ -25,24 +25,12 @@ class App extends Component {
   }
   render() {
 
-    let classname = 'box pos-0';
-    if (this.state.position === 0) {
-      classname = 'box pos-0';
-    }
-    if (this.state.position === 1) {
-      classname = 'box pos-1';
-    }
-    if (this.state.position === 2) {
-      classname = 'box pos-2';
-    }
-    if (this.state.position === 3) {
-      classname = 'box pos-3';
-    }
-    console.log(classname)
+
     return (
       <div className="container">
      <button className="btn" onClick={this.transform}>Transform</button>
-     <div className={classname}></div>
+    
+     <div className="ball"></div>
 
       </div>
      );

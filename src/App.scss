@@ -1,3 +1,8 @@
+@keyframes moveRight {
+  from {transform: translate3d(0,0,0);}
+  to {transform: translate3d(0,120px,0);}
+}
+
 .btn{
   width: 250px;
   border-radius: 3px;
@@ -13,19 +18,12 @@
   transition: all .6s ease-in-out;
 }
 
-.pos-0 {
-  background: red;
-  
-}
-.pos-1 {
-  background: green;
-  transform: translate3d(500px, 0px, 0px);
-}
-.pos-2 {
-  background: yellow;
-  transform: translate3d(500px, 500px, 0px);
-}
-.pos-3 {
-  background: black;
-  transform: translate3d(0px, 500px, 0px);
+
+
+.ball {
+  background: gray;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  animation: moveRight .7s ease-in-out infinite alternate forwards running;
 }
