@@ -30,7 +30,7 @@
   width: 50px;
   height: 50px;
   border-radius: 25px;
- /* fill mode is "normal forward" tag in animation this sets where the object stops and stays */
-  /* the fowards take indicates if the ball should go back to original spot of stay at the set spot */
-  animation: moveRight 2s ease-in-out 3 alternate normal forwards running;
+ /* In this lesson we go over how to setup custom movement types other
+ than ease-in-out by using cubic-bezier.com to create custom params */
+  animation: moveRight 2s cubic-bezier(.17,.67,.92,.19) 3 normal forwards running;
 }
